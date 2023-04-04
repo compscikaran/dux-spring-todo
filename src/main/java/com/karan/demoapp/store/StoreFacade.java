@@ -45,13 +45,8 @@ public class StoreFacade {
             return state;
         };
 
-        Middleware<AppState> loggerMiddleware = (store, next, action) -> {
-            System.out.println("Old State: " + store.getState());
-            next.accept(action);
-            System.out.println("New State: " + store.getState());
-        };
-
-        myStore = new DuxStore<>(new AppState(), reducer, loggerMiddleware);
+        myStore = new DuxStore<>(new AppState(), reducer);
+        myStore.subscribe((state) -> System.out.println(state));
     }
 
     public void dispatch(Action action) {
