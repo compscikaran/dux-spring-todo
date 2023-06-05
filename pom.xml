@@ -38,7 +38,7 @@
         <dependency>
             <groupId>org.compscikaran</groupId>
             <artifactId>dux-java</artifactId>
-            <version>1.2.0</version>
+            <version>1.4.2</version>
         </dependency>
         <dependency>
             <groupId>cglib</groupId>
